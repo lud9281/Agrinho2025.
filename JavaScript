@@ -1,0 +1,33 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const storyForm = document.getElementById('story-form');
+    const storiesContainer = document.getElementById('stories-container');
+    const submissionMessage = document.getElementById('submission-message');
+
+    storyForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const location = document.getElementById('location').value;
+        const storyText = document.getElementById('story').value;
+
+        addStoryToMural(name, location, storyText);
+        storyForm.reset();
+        submissionMessage.style.display = 'block';
+        setTimeout(() => {
+            submissionMessage.style.display = 'none';
+        }, 3000);
+    });
+
+    function addStoryToMural(name, location, story) {
+        const storyCard = document.createElement('div');
+        storyCard.classList.add('story-card');
+        storyCard.innerHTML = `
+            <h3>Uma Conexão de ${location === 'campo' ? 'um(a) habitante do campo' : 'um(a) habitante da cidade'}</h3>
+            <p>${story}</p>
+            <p class="story-author">- ${name}</p>
+        `;
+        storiesContainer.prepend(storyCard); // Adiciona a história no início do mural
+    }
+
+    // Aqui você poderia adicionar lógica para carregar histórias existentes de um servidor/armazenamento local
+});

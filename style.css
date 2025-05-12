@@ -1,0 +1,119 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #074707; /* Um verde que remete ao campo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#submission-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#submission-form h2 {
+    color: #074707;
+    margin-top: 0;
+}
+
+#submission-form div {
+    margin-bottom: 15px;
+}
+
+#submission-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#submission-form input[type="text"],
+#submission-form select,
+#submission-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submission-form textarea {
+    resize: vertical;
+}
+
+#submission-form button {
+    background-color:  #074707
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#submission-form button:hover {
+    background-color: #4cae4c;
+}
+
+#stories-mural {
+    padding: 20px;
+    margin: 20px;
+}
+
+#stories-mural h2 {
+    color: #5cb85c;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.story-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.story-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.story-card p {
+    color: #666;
+}
+
+.story-author {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+JavaScript

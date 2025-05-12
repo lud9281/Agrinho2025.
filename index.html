@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Histórias Campo-Cidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Compartilhe sua História da Conexão Campo-Cidade</h1>
+        <p>Conte como a interação entre o campo e a cidade impactou sua vida.</p>
+    </header>
+
+    <section id="submission-form">
+        <h2>Compartilhe sua História</h2>
+        <form id="story-form">
+            <div>
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="location">Você é do Campo ou da Cidade?</label>
+                <select id="location" name="location">
+                    <option value="campo">Campo</option>
+                    <option value="cidade">Cidade</option>
+                </select>
+            </div>
+            <div>
+                <label for="story">Sua História:</label>
+                <textarea id="story" name="story" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar História</button>
+        </form>
+        <div id="submission-message" style="display:none;">
+            Obrigado por compartilhar sua história! Ela será exibida no mural em breve.
+        </div>
+    </section>
+
+    <section id="stories-mural">
+        <h2>Mural de Histórias</h2>
+        <div id="stories-container">
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mural de Histórias Campo-Cidade</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
